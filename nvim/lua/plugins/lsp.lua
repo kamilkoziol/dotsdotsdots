@@ -224,6 +224,7 @@ return {
       taplo = {
         filetypes = { 'toml' },
       },
+      biome = { filetypes = { 'css' } },
     }
 
     -- Ensure the servers and tools above are installed
