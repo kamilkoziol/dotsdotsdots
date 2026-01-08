@@ -20,8 +20,7 @@ return {
     --
     -- LSP is an initialism you've probably heard, but might not understand what it is.
     --
-    -- LSP stands for Language Server Protocol. It's a protocol that helps editors
-    -- and language tooling communicate in a standardized fashion.
+    -- LSP stands for Language Server Protocol. It's a protocol that helps editors and language tooling communicate in a standardized fashion.
     --
     -- In general, you have a "server" which is some tool built to understand a particular
     -- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
@@ -32,8 +31,7 @@ return {
     --  - Go to definition
     --  - Find references
     --  - Autocompletion
-    --  - Symbol Search
-    --  - and more!
+    --  - Symbol Search - and more!
     --
     -- Thus, Language Servers are external tools that must be installed separately from
     -- Neovim. This is where `mason` and related plugins come into play.
@@ -101,11 +99,7 @@ return {
         ---@param bufnr? integer some lsp support methods only in specific files
         ---@return boolean
         local function client_supports_method(client, method, bufnr)
-          if vim.fn.has 'nvim-0.11' == 1 then
-            return client:supports_method(method, bufnr)
-          else
-            return client.supports_method(method, { bufnr = bufnr })
-          end
+          return client:supports_method(method, bufnr)
         end
 
         -- The following two autocommands are used to highlight references of the
@@ -224,7 +218,24 @@ return {
       taplo = {
         filetypes = { 'toml' },
       },
-      biome = { filetypes = { 'css' } },
+      biome = {
+        filetypes = {
+          'astro',
+          'css',
+          'graphql',
+          'html',
+          'javascript',
+          'javascriptreact',
+          'json',
+          'jsonc',
+          'svelte',
+          'typescript',
+          'typescript.tsx',
+          'typescriptreact',
+          'vue',
+        },
+      },
+      ts_ls = {},
     }
 
     -- Ensure the servers and tools above are installed

@@ -11,3 +11,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  desc = 'Concealing characters in markdown files (obsidian)',
+  pattern = 'markdown',
+  callback = function()
+    vim.opt_local.conceallevel = 1
+  end,
+})
