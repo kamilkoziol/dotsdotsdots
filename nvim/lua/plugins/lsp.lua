@@ -215,26 +215,8 @@ return {
           },
         },
       },
-      taplo = {
-        filetypes = { 'toml' },
-      },
-      biome = {
-        filetypes = {
-          'astro',
-          'css',
-          'graphql',
-          'html',
-          'javascript',
-          'javascriptreact',
-          'json',
-          'jsonc',
-          'svelte',
-          'typescript',
-          'typescript.tsx',
-          'typescriptreact',
-          'vue',
-        },
-      },
+      taplo = {},
+      biome = {},
       ts_ls = {},
     }
 
