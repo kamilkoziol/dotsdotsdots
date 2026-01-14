@@ -22,3 +22,6 @@ disabled = true
 [nodejs]
 symbol = "󰎙 "
 format = "[$symbol$version]($style)"
+
+[fill]
+symbol = " "
