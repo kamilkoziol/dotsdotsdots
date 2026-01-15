@@ -218,6 +218,8 @@ return {
       taplo = {},
       biome = {},
       ts_ls = {},
+      tailwindcss = {},
+      hyprls = {},
     }
 
     -- Ensure the servers and tools above are installed
