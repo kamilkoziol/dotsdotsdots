@@ -61,7 +61,10 @@ alias ls='ls --color'
 #Shell integrations
 eval "$(fzf --zsh)"
 
-# bun completions
-[ -s "/home/kamil/opt/bun/_bun" ] && source "/home/kamil/opt/bun/_bun"
-export BUN_INSTALL="$HOME/opt/bun" 
-export PATH="$BUN_INSTALL/bin:$PATH" 
+# bun
+export BUN_INSTALL="$HOME/opt/bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun" 
+
+# copilot
+export PATH="$PATH:/home/kamil/opt/copilot/bin"

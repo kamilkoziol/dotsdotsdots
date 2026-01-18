@@ -7,7 +7,9 @@ return { -- You can easily change to a different colorscheme.
   priority = 1000, -- Make sure to load this before all the other start plugins.
   config = function()
     ---@diagnostic disable-next-line: missing-fields
-    require('catppuccin').setup {}
+    require('catppuccin').setup {
+      transparent_background = true,
+    }
 
     -- Load the colorscheme here.
     -- Like many other themes, this one has different styles, and you could load
