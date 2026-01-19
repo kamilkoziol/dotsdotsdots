@@ -220,6 +220,7 @@ return {
       ts_ls = {},
       tailwindcss = {},
       hyprls = {},
+      bashls = {},
     }
 
     -- Ensure the servers and tools above are installed
