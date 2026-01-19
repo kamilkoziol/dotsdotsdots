@@ -42,6 +42,7 @@ zstyle :compinstall filename '/home/kamil/.config/zsh/.zshrc'
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
+zstyle ':completion:*' menu select
 
 eval "$(dircolors -b)"
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
