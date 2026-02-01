@@ -9,6 +9,7 @@ $username\
 $hostname\
 $directory\
 $fill\
+$git_branch\
 $nodejs\
 $line_break\
 $character
