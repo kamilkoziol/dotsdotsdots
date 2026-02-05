@@ -16,4 +16,6 @@ tmux/plugins
 !starship/**
 !hypr
 !hypr/**
+!waybar
+!waybar/**
 !.gitignore
