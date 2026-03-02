@@ -18,4 +18,6 @@ tmux/plugins
 !hypr/**
 !waybar
 !waybar/**
+!packages
+!packages/**
 !.gitignore
