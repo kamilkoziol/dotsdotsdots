@@ -50,11 +50,15 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Starship config
 eval "$(starship init zsh)"
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
+export STARSHIP_CACHE="${XDG_CACHE_HOME}/starship"
 
 # NVM config
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 
 # Aliases
 alias ls='ls --color'
@@ -69,3 +73,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # copilot
 export PATH="$PATH:/home/kamil/opt/copilot/bin"
+
+# Claude
+export PATH="$HOME/.local/bin:$PATH"
+
+# Misc
+export CARGO_HOME="${XDG_DATA_HOME}/cargo"
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
+export BITWARDEN_SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}"
