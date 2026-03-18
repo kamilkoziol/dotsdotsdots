@@ -20,4 +20,6 @@ tmux/plugins
 !waybar/**
 !packages
 !packages/**
+!gh/
+!gh/config.yml
 !.gitignore
