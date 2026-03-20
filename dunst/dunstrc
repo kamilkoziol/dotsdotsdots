@@ -1,6 +1,8 @@
 [global]
+font = Hack Nerd Font Mono 10
+frame_width = 1
+origin = bottom-center
 frame_color = "#89b4fa"
-separator_color= frame
 highlight = "#89b4fa"
 
 [urgency_low]
