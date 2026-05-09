@@ -5,6 +5,16 @@ get_current_volume() {
     pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | sed 's/%//'
 }
 
+notify-volume () {
+    local CURRENT_VOLUME=$(get_current_volume)
+    dunstify \
+        -a "Volume control" \
+        -h string:x-dunst-stack-tag:VOLUMECONTROL \
+        -h int:value:$CURRENT_VOLUME \
+        "Volume control" \
+        "$CURRENT_VOLUME%" 
+}
+
 # Check command line arguments
 if [[ "$#" != 1 || ! ("$1" == "inc" || "$1" == "dec" || "$1" == "mute" ) ]]; then
     printf "Usage: $0 [inc|dec|mute]\n"
@@ -20,9 +30,12 @@ fi
 # Perform volume adjustment
 if [[ "$1" == "inc" ]]; then
     [ "$(get_current_volume)" -lt 150 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%
+    notify-volume 
 elif [[ "$1" == "dec" ]]; then
     pactl set-sink-volume @DEFAULT_SINK@ -5%
+    notify-volume 
 elif [[ "$1" == "mute" ]]; then
     pactl set-sink-mute @DEFAULT_SINK@ toggle
+    notify-volume 
 fi
 
