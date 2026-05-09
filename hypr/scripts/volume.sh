@@ -6,13 +6,26 @@ get_current_volume() {
 }
 
 notify-volume () {
+
+    local TOGGLE_OPTION=$1
+    local MUTED=$(pactl get-sink-mute @DEFAULT_SINK@ | sed 's/Mute: //')
+    local MUTED_TEXT=''
+
     local CURRENT_VOLUME=$(get_current_volume)
+    echo $MUTED
+
+    if [[ $MUTED = "yes" ]]; then
+        MUTED_TEXT=" \(muted)"
+    fi
+
+
+
     dunstify \
         -a "Volume control" \
         -h string:x-dunst-stack-tag:VOLUMECONTROL \
         -h int:value:$CURRENT_VOLUME \
         "Volume control" \
-        "$CURRENT_VOLUME%" 
+        "$CURRENT_VOLUME%$MUTED_TEXT" 
 }
 
 # Check command line arguments
