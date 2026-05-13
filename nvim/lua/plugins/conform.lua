@@ -31,6 +31,8 @@ return { -- Autoformat
     formatters_by_ft = {
       lua = { 'stylua' },
       json = { 'biome' },
+      jsonc = { 'biome' },
+
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
