@@ -41,6 +41,7 @@ zinit light zsh-users/zsh-autosuggestions
 zstyle :compinstall filename '/home/kamil/.config/zsh/.zshrc'
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
 autoload -Uz compinit
+mkdir -p "$XDG_CACHE_HOME"/zsh
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 zstyle ':completion:*' menu select
 
