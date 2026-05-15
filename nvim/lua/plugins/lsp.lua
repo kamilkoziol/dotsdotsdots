@@ -222,6 +222,7 @@ return {
       hyprls = {},
       bashls = {},
       zls = {},
+      cssls = {},
     }
 
     -- Ensure the servers and tools above are installed
