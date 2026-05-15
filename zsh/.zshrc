@@ -81,3 +81,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
 export BITWARDEN_SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}"
+
+# opencode
+export PATH=/home/kamil/.opencode/bin:$PATH
