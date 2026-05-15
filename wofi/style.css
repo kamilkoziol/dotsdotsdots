@@ -1,0 +1,24 @@
+#window {
+	--border-color: blue;
+	background-color: transparent;
+}
+
+#outer-box {
+	border: 0px;
+}
+
+#inner-box {
+	margin-top: 10px;
+	background-color: white;
+	padding: 6px;
+	border-radius: 2px;
+}
+
+#entry {
+	border: 2px solid pink;
+}
+
+#text {
+	border: 1px solid green;
+	color: var(--border-color);
+}
