@@ -22,4 +22,7 @@ tmux/plugins
 !packages/**
 !gh/
 !gh/config.yml
+!wofi
+!wofi/**
 !.gitignore
+
