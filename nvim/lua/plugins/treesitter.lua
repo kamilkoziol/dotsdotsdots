@@ -23,4 +23,12 @@ return { -- Highlight, edit, and navigate code
   --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
   --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
   --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+  config = function(plug, opts)
+    for k, v in ipairs(opts) do
+      print(k .. '=' .. v)
+    end
+    local ts = require 'nvim-treesitter'
+    ts.install(opts.ensure_installed)
+    ts.setup(opts)
+  end,
 }
