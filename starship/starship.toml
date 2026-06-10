@@ -11,6 +11,7 @@ $directory\
 $fill\
 $git_branch\
 $nodejs\
+$python\
 $line_break\
 $character
 """
