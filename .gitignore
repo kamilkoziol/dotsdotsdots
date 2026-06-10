@@ -16,6 +16,7 @@ tmux/plugins
 !starship/**
 !hypr
 !hypr/**
+hypr/profiles/current
 !waybar
 !waybar/**
 !packages
