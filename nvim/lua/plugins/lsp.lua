@@ -223,6 +223,7 @@ return {
       bashls = {},
       zls = {},
       cssls = {},
+      clangd = {},
     }
 
     -- Ensure the servers and tools above are installed

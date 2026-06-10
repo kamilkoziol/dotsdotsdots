@@ -91,6 +91,9 @@ export PYENV_ROOT="$HOME/opt/pyenv"
 eval "$(pyenv init - bash)"
 eval "$(pyenv virtualenv-init -)"
 
-
 # bun completions
 [ -s "/home/kamil/opt/bun/_bun" ] && source "/home/kamil/opt/bun/_bun"
+
+#UV
+. "$HOME/opt/uv/env"
+eval "$(uv generate-shell-completion zsh)"
