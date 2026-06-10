@@ -84,3 +84,13 @@ export BITWARDEN_SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}"
 
 # opencode
 export PATH=/home/kamil/.opencode/bin:$PATH
+
+# pyenv
+export PYENV_ROOT="$HOME/opt/pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+eval "$(pyenv virtualenv-init -)"
+
+
+# bun completions
+[ -s "/home/kamil/opt/bun/_bun" ] && source "/home/kamil/opt/bun/_bun"
