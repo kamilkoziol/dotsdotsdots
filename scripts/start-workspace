@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+NAME=$1
+
+tmux new -d -s "$NAME"
+tmux send-keys -t "$NAME":1 "nvim ." C-m
+
+tmux new-window -t "$NAME":2 -n claude
+tmux send-keys -t "$NAME":2 "claude" C-m
+
+tmux new-window -t "$NAME":3
+
+tmux select-window -t "$NAME":1
+tmux attach-session -t "$NAME"
+

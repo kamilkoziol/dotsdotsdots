@@ -25,5 +25,7 @@ hypr/profiles/current
 !gh/config.yml
 !wofi
 !wofi/**
+!scripts
+!scripts/**
 !.gitignore
 
