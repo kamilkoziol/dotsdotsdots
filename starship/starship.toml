@@ -1,29 +1,73 @@
-# Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Inserts a blank line between shell prompts
 add_newline = true
 
 format = """
 $username\
 $hostname\
 $directory\
-$fill\
 $git_branch\
+$git_status\
 $nodejs\
 $python\
+$fill\
 $line_break\
 $character
 """
 
+[character]
+success_symbol = "[❯](bold #cba6f7)"
+error_symbol = "[❯](bold #f38ba8)"
+vimcmd_symbol = "[❮](bold #cba6f7)"
 
-# Disable the package module, hiding it from the prompt completely
+[username]
+style_user = "#7f849c"
+style_root = "#f38ba8"
+format = "[$user]($style)"
+show_always = false
+
+[hostname]
+style = "#7f849c"
+format = "[@$hostname]($style) "
+ssh_only = true
+
+[directory]
+style = "#cdd6f4"
+format = "[$path]($style)[$read_only]($read_only_style) "
+read_only = " ro"
+read_only_style = "#7f849c"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+style = "#7f849c"
+format = "[$branch]($style)"
+
+[git_status]
+style = "#cba6f7"
+format = "[$all_status$ahead_behind]($style) "
+conflicted = "!"
+untracked = "?"
+modified = "*"
+staged = "+"
+renamed = "r"
+deleted = "x"
+stashed = "$"
+ahead = "^${count}"
+behind = "v${count}"
+diverged = "^${ahead_count}v${behind_count}"
+
 [package]
 disabled = true
 
 [nodejs]
 symbol = "󰎙 "
-format = "[$symbol$version]($style)"
+style = "#7f849c"
+format = "[$symbol$version]($style) "
+
+[python]
+style = "#7f849c"
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 
 [fill]
 symbol = " "

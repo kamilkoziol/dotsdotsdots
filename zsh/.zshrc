@@ -1,5 +1,6 @@
 #BASE CONFIG START 
 HISTFILE="$XDG_STATE_HOME"/zsh/history 
+mkdir -p "${HISTFILE:h}"
 HISTSIZE=10000 
 SAVEHIST=10000 
 HISTDUP=erase
@@ -55,13 +56,12 @@ export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 export STARSHIP_CACHE="${XDG_CACHE_HOME}/starship"
 
 # NVM config
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+mkdir -p "$NVM_DIR"
+[ -s /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
 # Aliases
 alias ls='ls --color'
-alias sw='/home/kamil/.config/scripts/start-workspace'
 
 #Shell integrations
 eval "$(fzf --zsh)"
@@ -78,6 +78,8 @@ export PATH="$PATH:/home/kamil/opt/copilot/bin"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Misc
+export EDITOR=nvim
+export VISUAL=nvim
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
 export BITWARDEN_SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}"
@@ -86,14 +88,14 @@ export BITWARDEN_SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}"
 export PATH=/home/kamil/.opencode/bin:$PATH
 
 # pyenv
-export PYENV_ROOT="$HOME/opt/pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - bash)"
-eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+if (( $+commands[pyenv] )); then
+  eval "$(pyenv init - zsh)"
+  (( $+commands[pyenv-virtualenv-init] )) && eval "$(pyenv virtualenv-init -)"
+fi
 
 # bun completions
 [ -s "/home/kamil/opt/bun/_bun" ] && source "/home/kamil/opt/bun/_bun"
 
 #UV
-. "$HOME/opt/uv/env"
 eval "$(uv generate-shell-completion zsh)"
