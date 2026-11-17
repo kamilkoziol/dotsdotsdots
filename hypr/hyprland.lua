@@ -1,14 +1,15 @@
+---------------------
+---- MY PROGRAMS ----
+---------------------
+MainMod = 'SUPER' -- Sets "Windows" key as main modifier
+Terminal = 'kitty'
+FileManager = 'thunar'
+Menu = 'wofi --show drun'
+
 ------------------
 --- MONITORS ----
 ------------------
 require 'profiles.current.hyprmonitors'
-
----------------------
----- MY PROGRAMS ----
----------------------
-Terminal = 'kitty'
-FileManager = 'dolphin'
-Menu = 'wofi --show drun'
 
 require 'lua.autostart'
 
@@ -103,7 +104,6 @@ hl.window_rule {
 
   suppress_event = 'maximize',
 }
--- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule {
   -- Fix some dragging issues with XWayland
@@ -120,14 +120,6 @@ hl.window_rule {
   no_focus = true,
 }
 
--- Layer rules also return a handle.
--- local overlayLayerRule = hl.layer_rule({
---     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
-
 -- Hyprland-run windowrule
 hl.window_rule {
   name = 'move-hyprland-run',
@@ -137,5 +129,9 @@ hl.window_rule {
   float = true,
 }
 
--- Maximized window with thick border
-hl.window_rule { name = 'fullscreen-window-thick-border', match = { fullscreen = true }, border_size = 6 }
+hl.window_rule { name = 'fullscreen-window-no-border', match = { fullscreen = true }, border_size = 0 }
+
+hl.workspace_rule {
+  workspace = 'f[1]',
+  gaps_out = 5,
+}

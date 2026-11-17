@@ -25,7 +25,6 @@ hl.config {
 
   decoration = {
     rounding = 0,
-    rounding_power = 0,
 
     -- Change transparency of focused and unfocused windows
     active_opacity = 1.0,
@@ -48,5 +47,34 @@ hl.config {
 
   animations = {
     enabled = true,
+  },
+}
+
+hl.config {
+  group = {
+    col = {
+      border_active = 'rgb(cba6f7)',
+      border_inactive = 'rgb(181825)',
+      border_locked_active = 'rgb(f5c2e7)',
+      border_locked_inactive = 'rgb(181825)',
+    },
+
+    groupbar = {
+      font_family = 'Hack Nerd Font Mono',
+      font_size = 12,
+      font_weight_active = 'bold',
+      font_weight_inactive = 'bold',
+      text_padding = 22,
+      height = 16,
+      indicator_height = 2,
+      col = {
+        active = 'rgb(cba6f7)',
+        inactive = 'rgb(313244)',
+        locked_active = 'rgb(f5c2e7)',
+        locked_inactive = 'rgb(313244)',
+      },
+      text_color = 'rgb(11111b)',
+      text_color_inactive = 'rgb(a6adc8)',
+    },
   },
 }
