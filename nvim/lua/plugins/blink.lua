@@ -29,7 +29,6 @@ return { -- Autocompletion
       },
       opts = {},
     },
-    'folke/lazydev.nvim',
   },
   --- @module 'blink.cmp'
   --- @type blink.cmp.Config
@@ -75,7 +74,8 @@ return { -- Autocompletion
     },
 
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'lazydev' },
+      default = { 'lsp', 'path', 'snippets' },
+      per_filetype = { lua = { inherit_defaults = true, 'lazydev' } },
       providers = {
         lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
       },
