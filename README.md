@@ -12,12 +12,13 @@ sudo pacman -S grim slurp satty wf-recorder cliphist \
   udisks2 udiskie gvfs gvfs-mtp tumbler \
   tlp ufw xdg-user-dirs \
   noto-fonts noto-fonts-emoji \
-  starship uv pyenv tree ripgrep jq tmux \
+  starship uv pyenv tree ripgrep jq tmux wget rtkit \
   neovim gcc make unzip tree-sitter-cli fd wl-clipboard \
   base-devel openssl zlib xz tk \
   webp-pixbuf-loader libavif \
-  libreoffice-fresh hunspell-pl hunspell-en_us
-yay -S nvm pyenv-virtualenv
+  libreoffice-fresh hunspell-pl hunspell-en_us thunderbird \
+  networkmanager-openvpn gnome-keyring
+yay -S nvm pyenv-virtualenv visual-studio-code-bin
 sudo systemctl enable --now bluetooth
 ```
 
