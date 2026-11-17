@@ -19,6 +19,8 @@ require 'lua.autostart'
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 hl.env('XCURSOR_SIZE', '24')
 hl.env('HYPRCURSOR_SIZE', '24')
+hl.env('EDITOR', 'nvim')
+hl.env('VISUAL', 'nvim')
 
 require 'profiles.current.hyprenvs'
 require 'lua.look_and_feel'
