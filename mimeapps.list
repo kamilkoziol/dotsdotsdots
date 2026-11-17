@@ -1,0 +1,10 @@
+[Default Applications]
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+image/png=satty.desktop
+image/jpeg=satty.desktop
+image/jpg=satty.desktop
+image/webp=satty.desktop
+image/bmp=satty.desktop
+image/tiff=satty.desktop
+image/avif=satty.desktop
+image/gif=mpv.desktop
