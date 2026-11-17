@@ -157,3 +157,9 @@ tooltip label {
   padding: 4px 8px;
   color: @text;
 }
+
+menu check,
+menu radio {
+  min-width: 14px;
+  min-height: 14px;
+}
