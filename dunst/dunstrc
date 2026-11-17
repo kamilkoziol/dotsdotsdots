@@ -1,13 +1,14 @@
 [global]
 font = Hack Nerd Font Mono 10
 frame_width = 1
-origin = bottom-center
-frame_color = "#89b4fa"
-highlight = "#89b4fa"
+origin = top-right
+frame_color = "#313244"
+separator_color = frame
+highlight = "#cba6f7"
 
 [urgency_low]
 background = "#1e1e2e"
-foreground = "#cdd6f4"
+foreground = "#a6adc8"
 
 [urgency_normal]
 background = "#1e1e2e"
@@ -16,4 +17,4 @@ foreground = "#cdd6f4"
 [urgency_critical]
 background = "#1e1e2e"
 foreground = "#cdd6f4"
-frame_color = "#fab387"
+frame_color = "#f38ba8"

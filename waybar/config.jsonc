@@ -17,11 +17,7 @@
   ],
 
   "hyprland/workspaces": {
-    "format": "{name}: {icon}",
-    "format-icons": {
-      "active": "",
-      "default": ""
-    }
+    "format": "{name}"
   },
 
   "bluetooth": {
@@ -43,7 +39,7 @@
     "tooltip": false,
     "format": "{:%H:%M:%S  -  %A, %d}",
     "interval": 1,
-    "on-click": "calcurse"
+    "on-click": "kitty -e calcurse"
   },
 
   "network": {
