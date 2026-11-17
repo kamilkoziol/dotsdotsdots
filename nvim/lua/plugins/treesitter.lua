@@ -24,11 +24,17 @@ return { -- Highlight, edit, and navigate code
   --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
   --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   config = function(plug, opts)
-    for k, v in ipairs(opts) do
-      print(k .. '=' .. v)
-    end
     local ts = require 'nvim-treesitter'
     ts.install(opts.ensure_installed)
     ts.setup(opts)
+    vim.api.nvim_create_autocmd('FileType', {
+      group = vim.api.nvim_create_augroup('treesitter-start', { clear = true }),
+      callback = function(args)
+        if not pcall(vim.treesitter.start, args.buf) then
+          return
+        end
+        vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      end,
+    })
   end,
 }

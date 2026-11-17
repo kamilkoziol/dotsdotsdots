@@ -32,7 +32,12 @@ return { -- Autoformat
       lua = { 'stylua' },
       json = { 'biome' },
       jsonc = { 'biome' },
-      c = { 'clangd_formatter' },
+      c = { 'clang-format' },
+      javascript = { 'biome' },
+      javascriptreact = { 'biome' },
+      typescript = { 'biome' },
+      typescriptreact = { 'biome' },
+      css = { 'biome' },
 
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },

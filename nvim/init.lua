@@ -56,6 +56,7 @@ require('lazy').setup({
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
 }, {
+  rocks = { enabled = false },
 
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
