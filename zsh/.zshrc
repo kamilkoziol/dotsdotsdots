@@ -82,6 +82,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
+export npm_config_cache="${XDG_CACHE_HOME}/npm"
 export CLAUDE_CONFIG_DIR="${XDG_CONFIG_HOME}/claude"
 export BITWARDEN_SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}"
 
