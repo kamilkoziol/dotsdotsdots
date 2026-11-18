@@ -32,8 +32,13 @@ hl.config {
   dwindle = {
     preserve_split = true, -- You probably want this
     force_split = 2,
-    special_scale_factor = 0.95,
   },
+}
+
+-- Replaces deprecated dwindle.special_scale_factor = 0.95
+hl.workspace_rule {
+  workspace = 's[true]',
+  gaps_out = { top = 40, right = 58, bottom = 40, left = 58 },
 }
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
