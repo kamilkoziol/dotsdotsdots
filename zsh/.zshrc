@@ -66,14 +66,6 @@ alias ls='ls --color'
 #Shell integrations
 eval "$(fzf --zsh)"
 
-# bun
-export BUN_INSTALL="$HOME/opt/bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun" 
-
-# copilot
-export PATH="$PATH:/home/kamil/opt/copilot/bin"
-
 # Claude
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -86,18 +78,12 @@ export npm_config_cache="${XDG_CACHE_HOME}/npm"
 export CLAUDE_CONFIG_DIR="${XDG_CONFIG_HOME}/claude"
 export BITWARDEN_SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}"
 
-# opencode
-export PATH=/home/kamil/.opencode/bin:$PATH
-
 # pyenv
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 if (( $+commands[pyenv] )); then
   eval "$(pyenv init - zsh)"
   (( $+commands[pyenv-virtualenv-init] )) && eval "$(pyenv virtualenv-init -)"
 fi
-
-# bun completions
-[ -s "/home/kamil/opt/bun/_bun" ] && source "/home/kamil/opt/bun/_bun"
 
 #UV
 eval "$(uv generate-shell-completion zsh)"
