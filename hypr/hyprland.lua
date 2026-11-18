@@ -21,6 +21,7 @@ hl.env('XCURSOR_SIZE', '24')
 hl.env('HYPRCURSOR_SIZE', '24')
 hl.env('EDITOR', 'nvim')
 hl.env('VISUAL', 'nvim')
+hl.env('CLAUDE_CONFIG_DIR', os.getenv('HOME') .. '/.config/claude')
 
 require 'profiles.current.hyprenvs'
 require 'lua.look_and_feel'
