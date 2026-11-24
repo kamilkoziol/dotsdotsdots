@@ -1,0 +1,51 @@
+{
+  "permissions": {
+    "deny": [
+      "EnterPlanMode",
+      "ExitPlanMode",
+      "DesignSync",
+      "NotebookEdit",
+      "SendMessage",
+      "PushNotification",
+      "RemoteTrigger",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "AskUserQuestion",
+      "CronCreate",
+      "CronDelete",
+      "CronList"
+    ]
+  },
+  "model": "opus",
+  "disableClaudeAiConnectors": true,
+  "disableBundledSkills": true,
+  "disableRemoteControl": true,
+  "disableWorkflows": true,
+  "disableArtifact": true,
+  "extraKnownMarketplaces": {
+    "taste-skill": {
+      "source": {
+        "source": "github",
+        "repo": "Leonxlnx/taste-skill"
+      }
+    }
+  },
+  "modelSettings": {
+    "claude-opus-5": {
+      "effortLevel": "high"
+    },
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
+  "dialogExpiry": "60s",
+  "tui": "fullscreen",
+  "autoMemoryEnabled": false,
+  "theme": "dark",
+  "switchModelsOnFlag": true,
+  "voiceEnabled": true,
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  }
+}

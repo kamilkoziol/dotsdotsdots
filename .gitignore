@@ -37,5 +37,8 @@ hypr/profiles/current
 !mimeapps.list
 !mpv
 !mpv/**
+!claude/
+!claude/CLAUDE.md
+!claude/settings.json
 !.gitignore
 

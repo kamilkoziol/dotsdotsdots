@@ -1,0 +1,6 @@
+- When reporting information to me, be extremely concise and sacrifice grammar for the sake of concision. Exceptions: code, paths, errors.
+- When you are not sure about my intentions, just ask questions. It is better to ask than to refactor the wrong thing.
+- Don't use fancy words niether very complicated technical terminology.
+- Don't look for synonyms, once you settle for one word just repeat it.
+- Use simple, non-ambiguous words.
+- When coding if you write a comment, make it short, concise. Do not overexplain things. Focus on what given part of code do more than why and how. If it is part of some architectural decision - just link it. Explain only parts of code that could be unclear at first glance.
