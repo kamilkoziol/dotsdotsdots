@@ -34,6 +34,16 @@ pyenv global 3.14
 ### Neovim
 Open `nvim` once: lazy installs plugins, mason installs LSPs/formatters. Check with `:Lazy`, `:Mason`, `:checkhealth`.
 
+### tmux
+Set up the GitHub SSH key first (`git/config` rewrites GitHub URLs to SSH). Start `tmux` once: tpm clones itself to `tmux/plugins/tpm` and installs plugins. Update with `prefix + U`.
+
+### Untracked config (copy by hand)
+Not in the repo (passwords, tokens, mail). Copy from the old machine:
+- `~/.config/thunderbird`
+- `~/.config/claude` (only `CLAUDE.md` and `settings.json` are tracked)
+- `~/.config/Code/User`
+- `~/.ssh`
+
 ### Hyprland user services
 ```sh
 systemctl --user enable hypridle hyprpaper hyprpolkitagent
@@ -46,6 +56,8 @@ sudo systemctl disable getty@tty2.service
 sudo systemctl enable ly@tty2.service
 ```
 Pick the `Hyprland` session (←/→), not `Hyprland (uwsm-managed)`.
+
+ly unlocks the keyring at login only if it is named `login` and uses the login password. When an app asks to create a keyring, name it `login` and give it the login password.
 
 ### XDG user dirs and dark mode
 ```sh
