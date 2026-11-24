@@ -37,7 +37,7 @@ return { -- Autoformat
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
     },
     formatters = {
-      biome = { require_cwd = true },
+      biome = {},
     },
   },
 }
